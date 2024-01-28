@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div style="margin: 50px 10%">
+    <div class="card" style="width: 18rem;">
+        <img src="https://i.pinimg.com/564x/01/49/2c/01492cdca20911c57266c606bb10a33e.jpg" class="card-img-top"
+             alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Тест: "Насколько хорошо Вы знаете "Смешариков"?</h5>
+            <p class="card-text">Всем привет! <br/> Мы хотим узнать, насколько хорошо жители России знают мультик
+                'Смешарики'! <br/> В анкете Вы найдете несколько типов ответов: текстовый ввод, выбор варианта ответа и
+                тд. <br/> Пожалуйста, отвечайте честно и никуда не подглядывайте, это очень важно!</p>
+            <a href="/questions" class="btn btn-primary">Пройти опрос</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Опрос
+{% endblock %}
+
+{% block body %}
+<div style="margin: 50px 10%">
+    <h2>На сколько хорошо жители Москвы знают "Смешариков"?</h2>
+    <form class="container" action="process" method="POST">
+        <h4>Анкета информанта</h4>
+
+        <div class="form-group">
+            <label for="exampleInputCity1">Город:</label>
+            <input type="text" class="form-control" id="exampleInputCity1" aria-describedby="emailHelp"
+                   name="city">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputNumber1">Возраст:</label>
+            <input type="number" class="form-control" id="exampleInputNumber1" name="age">
+        </div>
+        <label>Пол:</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+                м
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                ж
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+                другое
+            </label>
+        </div>
+        <h2>Вопросы</h2>
+        <div class="form-group">
+            <label for="exampleInputSeries1">1. Сколько главных героев в мультике "Смешарики"?</label>
+            <input type="number" class="form-control" id="exampleInputSeries1" name="q1">
+        </div>
+
+        <label>2. Как называется место, где живут Смешарики?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="exampleRadios4" value="option1">
+            <label class="form-check-label" for="exampleRadios4">
+                Кругляндия
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="exampleRadios5" value="option2">
+            <label class="form-check-label" for="exampleRadios5">
+                Шарарам
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="q2" id="exampleRadios6" value="option3">
+            <label class="form-check-label" for="exampleRadios6">
+                Ромашковая долина
+            </label>
+        </div>
+        <label>3. С кем Лосяш пошел в поход в серии "Бутерброд"? </label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="q3">
+            <label class="form-check-label" for="defaultCheck1">
+                С Нюшей
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" name="q3">
+            <label class="form-check-label" for="defaultCheck2">
+                С Крошем
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" name="q3">
+            <label class="form-check-label" for="defaultCheck3">
+                С Ёжиком
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" name="q3">
+            <label class="form-check-label" for="defaultCheck4">
+                С Пином
+            </label>
+        </div>
+        <label>4. Что случилось с фантиками Ёжика?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="exampleRadios7" value="option1">
+            <label class="form-check-label" for="exampleRadios7">
+                Их унес ветер
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="exampleRadios8" value="option2">
+            <label class="form-check-label" for="exampleRadios8">
+                Их украл Крош
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="q4" id="exampleRadios9" value="option3">
+            <label class="form-check-label" for="exampleRadios9">
+                Ёжику надоело их коллекционировать и он их выкинул
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputSong1">5. Заполните пропуск в песне: "Кто мечтает быть пилотом
+                очень ... , видно, тот,
+                потому что только ...
+                сам полезет в самолёт"</label>
+            <input type="text" class="form-control" id="exampleInputSong1" aria-describedby="emailHelp" name="q5">
+        </div>
+        <div class="row">
+            <input class="submit" type="submit" name="submit" value="Отправить">
+        </div>
+    </form>
+</div>
+{% endblock %}

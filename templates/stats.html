@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Статистика
+{% endblock %}
+
+{% block body %}
+<div style="margin: 50px 10%">
+    <h1>Статистика</h1>
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Количество участников в опросе: {{ all_info['total_count'] }}</li>
+            <li class="list-group-item">Средний возраст: {{ all_info['age_mean'] }}</li>
+            <li class="list-group-item">Минимальный возраст: {{ all_info['age_min'] }}</li>
+            <li class="list-group-item">Средний ответ на вопрос 1: {{ all_info['q1_mean'] }}</li>
+            <li class="list-group-item">Количество верных ответов на 5-ый вопрос: {{ all_info['q5_correct'] }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
